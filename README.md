@@ -30,7 +30,7 @@ This is a simple application that utilizes an entire MERN stack convention with 
 
 Alternatively you can click this live deployed link powered by Heroku to get started
 
-<a href ="#"></a>
+<a href ="https://gentle-oasis-39830.herokuapp.com/">https://gentle-oasis-39830.herokuapp.com/</a>
 
 Below is a preview of what to expect on your shopping spree
 
