@@ -53,11 +53,15 @@ export const cartSlice = createSlice({
       state.value = [];
       state.cartOpen = false;
     },
-    toggleCart: (state, action) => {
+    toggleCart: (state) => {
       state.cartOpen = !state.cartOpen;
     },
   },
 });
 
 export const {addToCart, addMultipleToCart, updateCartQuantity, removeFromCart, clearCart, toggleCart} = cartSlice.actions;
+
+export const selectCartOpen = state => state.cart.cartOpen
+export const selectCartItems = state => state.cart.value
+
 export default cartSlice.reducer;

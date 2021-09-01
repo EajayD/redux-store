@@ -41,7 +41,7 @@ const Cart = () => {
     }
   }, [cartItems.length, dispatch]);
 
-  function toggleCart() {
+  function toggleCartActual() {
     dispatch(toggleCart());
   }
 
@@ -69,7 +69,7 @@ const Cart = () => {
 
   if (!cartOpen) {
     return (
-      <div className="cart-closed" onClick={toggleCart}>
+      <div className="cart-closed" onClick={toggleCartActual}>
         <span role="img" aria-label="trash">
           🛒
         </span>
@@ -79,13 +79,13 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <div className="close" onClick={toggleCart}>
+      <div className="close" onClick={toggleCartActual}>
         [close]
       </div>
       <h2>Shopping Cart</h2>
       {cartItems.length ? (
         <div>
-          {state.cart.map((item) => (
+          {cartItems.map((item) => (
             <CartItem key={item._id} item={item} />
           ))}
 
