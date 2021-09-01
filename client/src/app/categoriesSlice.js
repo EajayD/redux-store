@@ -1,19 +1,34 @@
 import {createSlice} from '@reduxjs/toolkit'
 
 export const categoriesSlice = createSlice({
-    name: 'categories',
-    initialState: {
-        value: []
+  name: "categories",
+  initialState: {
+    value: [],
+  },
+  reducers: {
+    updateCategories: {
+      reducer(state, action) {
+        state.value = [...action.payload];
+      },
+      prepare(categories) {
+        let categoriesList = categories ? categories : [];
+        return {
+          payload: categoriesList,
+        };
+      },
     },
-    reducers: {
-        updateCategories: (state, action) => {
-            state.value = [...action.categories];
-        },
-        updateCurrentCategory: (state, action) => {
-            state.currentCategory = action.currentCategory;
-        }
-    }
-})
+    updateCurrentCategory: {
+      reducer(state, action) {
+        state.currentCategory = action.payload;
+      },
+      prepare(currentCategory) {
+        return {
+          payload: currentCategory,
+        };
+      },
+    },
+  },
+});
 
 export const { updateCategories, updateCurrentCategory} = categoriesSlice.actions
 

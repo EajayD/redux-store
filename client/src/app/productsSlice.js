@@ -1,16 +1,24 @@
 import {createSlice} from '@reduxjs/toolkit'
 
 export const productsSlice = createSlice({
-    name: 'products',
-    initialState: {
-        value: []
+  name: "products",
+  initialState: {
+    value: [],
+  },
+  reducers: {
+    updateProducts: {
+      reducer(state, action) {
+        state.value = [...action.payload];
+      },
+      prepare(products) {
+        let productList = products ? products : [];
+        return {
+          payload: productList,
+        };
+      },
     },
-    reducers: {
-        updateProducts: (state, action) => {
-            state.value = [...action.products];
-        }
-    }
-})
+  },
+});
 
 export const {updateProducts} = productsSlice.actions
 export const selectProducts = state => state.products.value
