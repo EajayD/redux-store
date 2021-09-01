@@ -34,7 +34,17 @@ Alternatively you can click this live deployed link powered by Heroku to get sta
 
 Below is a preview of what to expect on your shopping spree
 
+The following animation shows how a user can register using the Signup page and then navigate to the Products page:
 
+![A user registers on the Signup page and then navigates to the Products page, which displays images and descriptions of products.](./assets/22-state-homework-demo-01.gif) 
+
+The following animation shows how the user can select a category, choose a product, view details about it on the product page, and add and remove it from their shopping cart:
+
+![The user selects a category, chooses a product, views details about it on the product page, and adds it to and removes it from their shopping cart.](./assets/22-state-homework-demo-02.gif)
+
+Finally, the user can check out by going to their shopping cart, as shown in the following animation:
+
+![The user checks out by going to their shopping cart.](./assets/22-state-homework-demo-03.gif)
 
 ## Built With
 
